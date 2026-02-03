@@ -19,5 +19,4 @@
 
 
 ## Diagram
-
 ![Database diagram of the Countries table.](database_diagram.png)

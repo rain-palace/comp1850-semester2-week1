@@ -6,6 +6,6 @@
 
 SELECT Student.StudentId, FirstName, LastName, CourseName
 FROM Student JOIN Enrolment JOIN Course
-ON Student.StudentId=Enrolment.EnrolmentId
-AND Enrolment.CourseId=Course.CourseId
-GROUP BY Student.StudentId;
+ON Student.StudentId=Enrolment.StudentId
+AND Course.CourseId=Enrolment.CourseId
+ORDER BY Student.StudentId;

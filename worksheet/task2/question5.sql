@@ -4,8 +4,8 @@
 .mode columns
 .headers on
 
-SELECT Student.StudentId, FirstName, LastName, Credits AS TotalCreditsPassed
+SELECT Student.StudentId, FirstName, LastName, SUM(Credits) AS TotalCreditsPassed
 FROM Student JOIN Enrolment JOIN Course
 ON Student.StudentId=Enrolment.StudentId
 AND Enrolment.CourseId=Course.CourseId
-GROUP BY Student.StudentId HAVING Grade>=40;
+WHERE Grade>=40 GROUP BY Student.StudentId;
